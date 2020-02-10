@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>errgou的博客</title>
-    <link>http://example.org/</link>
+    <link>http://liqiyi.xyz/</link>
     <description>Recent content on errgou的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <lastBuildDate>Mon, 10 Feb 2020 18:16:33 +0800</lastBuildDate>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://liqiyi.xyz/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Second Post</title>
-      <link>http://example.org/posts/second-post/</link>
+      <link>http://liqiyi.xyz/posts/second-post/</link>
       <pubDate>Mon, 10 Feb 2020 18:16:33 +0800</pubDate>
       
-      <guid>http://example.org/posts/second-post/</guid>
+      <guid>http://liqiyi.xyz/posts/second-post/</guid>
       <description>第二个测试博客 </description>
     </item>
     
     <item>
       <title>My First Post</title>
-      <link>http://example.org/posts/my-first-post/</link>
+      <link>http://liqiyi.xyz/posts/my-first-post/</link>
       <pubDate>Mon, 10 Feb 2020 16:55:48 +0800</pubDate>
       
-      <guid>http://example.org/posts/my-first-post/</guid>
+      <guid>http://liqiyi.xyz/posts/my-first-post/</guid>
       <description>新年快乐 终于有自己的博客了，希望之后可以多多写一些东西来填满它。</description>
     </item>
     
