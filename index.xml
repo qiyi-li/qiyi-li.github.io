@@ -6,29 +6,10 @@
     <description>Recent content on errgou的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Mon, 10 Feb 2020 20:09:03 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 10 Feb 2020 18:16:33 +0800</lastBuildDate>
     
 	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Hugo博客的搭建</title>
-      <link>http://example.org/posts/hugo%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/</link>
-      <pubDate>Mon, 10 Feb 2020 20:09:03 +0800</pubDate>
-      
-      <guid>http://example.org/posts/hugo%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/</guid>
-      <description>通过Hugo 和 Git，搭建一个属于自己的博客 首先需要先下载Hugo的安装包：  可以直接在 Google 搜索 Hugo Releases  点击第一个链接https://github.com/gohugoio/hugo/releases
-然后选择自己电脑对应的版本“hugo_0.64.1_Windows-64bit.zip”
-依旧在D:\Software建立文件夹：hugo，将文件“hugo.exe”放置其中，并按照如下步骤配置环境变量
-对我的电脑&amp;gt;右键选择属性&amp;gt;高级系统设置&amp;gt;环境变量&amp;gt;点击下方的Path&amp;gt;点击新建&amp;gt;将hugo的路径粘贴至此即可
-接着在通过cmder输入命令行
-hugo --version  若返回hugo的版本信息，说明安装正确，即开始下一步
-之后可以按照hugo官网给出的指示一步步完成配置信息 点击“Quick Start”
-第一步：安装并配置环境变量（这一步已经执行） 第二步：建立一个属于博客的文件夹 hugo new site quickstart  当中“quickstart”是文件夹名称，可以命名为: git名称.github.io-creator，易于理解
-第三步：下载主题 cd 刚才的目录 git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke echo &#39;theme = &amp;quot;ananke&amp;quot;&#39; &amp;gt;&amp;gt; config.toml  这一步目的是：
- 建立一个.git本地仓库 下载一个名为&amp;quot;ananke&amp;quot;的主题 然后配置它  第四步：建立一个页面 hugo new posts/博客主题.md  之后默认内容如下 ：
---- title: &amp;quot;博客主题&amp;quot; date: 2019-03-26T08:47:11+01:00 draft: true ---  之后可以在&amp;mdash;之下编写博客内容</description>
-    </item>
     
     <item>
       <title>Second Post</title>
