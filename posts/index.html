@@ -96,6 +96,254 @@
 	   
 <article class="post posts">
     <header class="post-header">
+        <h2 class="post-title"><a href="/posts/hugo%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/">Hugo博客的搭建</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            <h2 id="通过hugo-和-git搭建一个属于自己的博客">通过Hugo 和 Git，搭建一个属于自己的博客</h2>
+<h3 id="首先需要先下载hugo的安装包">首先需要先下载Hugo的安装包：</h3>
+<ul>
+<li>可以直接在 Google 搜索 Hugo Releases</li>
+</ul>
+<p>点击第一个链接<a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a></p>
+<p>然后选择自己电脑对应的版本“hugo_0.64.1_Windows-64bit.zip”</p>
+<p>依旧在D:\Software建立文件夹：hugo，将文件“hugo.exe”放置其中，并按照如下步骤配置环境变量</p>
+<p>对我的电脑&gt;右键选择属性&gt;高级系统设置&gt;环境变量&gt;点击下方的Path&gt;点击新建&gt;将hugo的路径粘贴至此即可</p>
+<p>接着在通过cmder输入命令行</p>
+<pre><code>hugo --version
+</code></pre>
+<p>若返回hugo的版本信息，说明安装正确，即开始下一步</p>
+<h3 id="之后可以按照hugo官网给出的指示一步步完成配置信息">之后可以按照hugo官网给出的指示一步步完成配置信息</h3>
+<p>点击“Quick Start”</p>
+<p><img src="/static/images/%E4%B8%BB%E9%A1%B5.png" alt="主页图片"></p>
+<h4 id="第一步安装并配置环境变量这一步已经执行">第一步：安装并配置环境变量（这一步已经执行）</h4>
+<p><img src="/static/images/1.png" alt="配置变量"></p>
+<h4 id="第二步建立一个属于博客的文件夹">第二步：建立一个属于博客的文件夹</h4>
+<p><img src="/static/images/2.png" alt="建立文件夹"></p>
+<pre><code>hugo new site quickstart
+</code></pre>
+<p>当中“quickstart”是文件夹名称，可以命名为: git名称.github.io-creator，易于理解</p>
+<h4 id="第三步下载主题">第三步：下载主题</h4>
+<p><img src="/static/images/3.png" alt="配置本地仓库"></p>
+<pre><code>cd 刚才的目录
+git init
+git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
+echo 'theme = &quot;ananke&quot;' &gt;&gt; config.toml
+</code></pre>
+<p>这一步目的是：</p>
+<ol>
+<li>建立一个.git本地仓库</li>
+<li>下载一个名为&quot;ananke&quot;的主题</li>
+<li>然后配置它</li>
+</ol>
+<h4 id="第四步建立一个页面">第四步：建立一个页面</h4>
+<p><img src="/static/images/4.png" alt="建立页面"></p>
+<pre><code>hugo new posts/博客主题.md
+</code></pre>
+<p>之后默认内容如下 ：</p>
+<pre><code>---
+title: &quot;博客主题&quot;
+date: 2019-03-26T08:47:11+01:00
+draft: true
+---
+</code></pre>
+<p>之后可以在&mdash;之下编写博客内容</p>
+<p>写完之后记得将上方的&quot;draft: true&quot;更改为：&rdquo; draft: false&rdquo;</p>
+<h4 id="第五步-启动hugo服务器">第五步 ：启动hugo服务器</h4>
+<p><img src="/static/images/5.png" alt="服务器"></p>
+<p>在命令行内输入以下代码：</p>
+<pre><code>hugo server -D
+</code></pre>
+<p>之后会返回如下值：</p>
+<pre><code>
+                   | EN
++------------------+----+
+  Pages            | 10
+  Paginator pages  |  0
+  Non-page files   |  0
+  Static files     |  3
+  Processed images |  0
+  Aliases          |  1
+  Sitemaps         |  1
+  Cleaned          |  0
+
+Total in 11 ms
+Watching for changes in /Users/bep/quickstart/{content,data,layouts,static,themes}
+Watching for config changes in /Users/bep/quickstart/config.toml
+Environment: &quot;development&quot;
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Press Ctrl+C to stop
+</code></pre><p>暂且不要关闭，点击底下的链接：
+<a href="http://localhost:1313/"> http://localhost:1313/</a></p>
+<p>即可在网页当中打开刚才编辑的博客</p>
+<h4 id="第六步自定义网站配置">第六步：自定义网站配置</h4>
+<p><img src="/static/images/6.png" alt="网站配置">
+打开初始文件夹当中的: config.toml</p>
+<pre><code>baseURL = &quot;https://example.org/&quot;
+languageCode = &quot;en-us&quot;
+title = &quot;My New Hugo Site&quot;
+theme = &quot;ananke&quot;
+</code></pre><p>第二行配置语言，可以更改为：</p>
+<pre><code>languageCode = &quot;zh-hans&quot;
+</code></pre>
+<p>最后一行为设置主题信息</p>
+<pre><code>theme = &quot;ananke&quot;
+</code></pre>
+<p>可以在官网的<a href="https://themes.gohugo.io/">主题区</a>,选择心仪的主题
+<img src="/static/images/theme.png" alt="theme"></p>
+<p>点击进去，找到下面这样的下载链接：</p>
+<pre><code>git clone https://github.com/kimcc/hugo-theme-noteworthy.git themes/noteworthy
+</code></pre>
+<p>在命令行运行上面代码之后，即可在themes文件夹之下下载新的主题代码文件夹</p>
+<p>之后再在网站配置：
+config.toml</p>
+<pre><code>theme = &quot;ananke&quot;
+</code></pre>
+<p>将&quot;ananke&quot;更换为新下载的主题名称，再重新运行即可。</p>
+<h4 id="第七步保存静态页面">第七步：保存静态页面</h4>
+<p><img src="/static/images/7.png" alt="建立静态页面"></p>
+<p>在命令行运行</p>
+<pre><code>hugo -D
+</code></pre>
+<p>即可将网页保存至
+public
+文件夹内</p>
+<h4 id="至此博客的配置便告一段落接下来说如何将博客代码上上传至github">至此博客的配置便告一段落，接下来说如何将博客代码上上传至github</h4>
+<h2 id="如何将这部分代码备份到git">如何将这部分代码备份到git</h2>
+<p>此时我们需要将
+public
+网页文件夹和
+博客的总文件夹
+分别上传到
+git
+上面</p>
+<h3 id="第一步将public和这个文件夹分离">第一步：将public和这个文件夹分离</h3>
+<p>需要在总的文件夹内新建一个名为
+.gitignore
+的文件
+在当中写入</p>
+<pre><code>/public/
+</code></pre>
+<p>意为在上传总文件夹的时候，忽略
+public
+文件夹</p>
+<p>然后进入
+public
+文件夹，运行</p>
+<pre><code>git init
+</code></pre>
+<p>在
+public
+文件夹内建立.git仓库</p>
+<h3 id="第二步在github建立一个新的仓库名称可以为">第二步：在github建立一个新的仓库，名称可以为：</h3>
+<pre><code>git名字.github.io
+</code></pre>
+<p>然后选择ssh，粘贴下面代码至命令行</p>
+<pre><code>git remote add origin git@xxxxxxx
+git push -u origin master
+</code></pre>
+<p>完成public部分代码的上传</p>
+<h3 id="第三步在github上面为这个总的文件夹再建一个仓库以作备份">第三步：在github上面，为这个总的文件夹再建一个仓库，以作备份。</h3>
+<p>新建一个
+git
+仓库，然后将
+ssh
+代码复制，将命令行切换回这个主文件夹，然后运行</p>
+<pre><code>git remote add origin git@xxxxxxx
+git push -u origin master
+</code></pre>
+<p>这样不论主体和public内容都上传到了
+github</p>
+<h3 id="在git上面预览博客">在git上面预览博客</h3>
+<p>进入保存public文件的仓库
+点击右上角
+setting</p>
+<p>找到
+GitHub Pages
+，如果下方没有下图绿色提示</p>
+<p><img src="/static/images/8.png" alt="提示"></p>
+<p>可如此设置</p>
+<p><img src="/static/images/git.png" alt="设置"></p>
+<p>之后点击绿色内部的链接，即可浏览博客内容</p>
+<h2 id="之后就是配置个人域名了">之后就是配置个人域名了</h2>
+<h3 id="首先得有一个域名">首先得有一个域名</h3>
+<p>下面是国外的一个注册域名的网站，价格较为优惠</p>
+<p><a href="https://www.namesilo.com/">https://www.namesilo.com/</a></p>
+<p><img src="/static/images/namesilo.png" alt="namesilo"></p>
+<p>可以在中间的搜索框，输入自己心仪的字符串，来查找对应的域名存在与否和价格情况</p>
+<p>点击Login，然后注册一个账号登录。</p>
+<p>选好域名然后添加购物车。</p>
+<p><img src="../../static/images/yuming.png" alt="域名"></p>
+<p>这个选择
+no
+会便宜一些</p>
+<p><img src="../../static/images/no.png" alt="选择"></p>
+<p>再之后进入付款的界面：</p>
+<p><img src="../../static/images/zhifu.png" alt="支付"></p>
+<p>选择支付宝，旁边输入支付宝安全邮箱，再之后完成支付即可。</p>
+<p>然后点击右上角的</p>
+<pre><code>Manage My Domains
+</code></pre>
+<p><img src="../../static/images/seting.png" alt="seting">
+管理域名，点击蓝色的球</p>
+<p><img src="../../static/images/AAAA.png" alt="ip地址配置"></p>
+<p>点击单个
+“A”
+在</p>
+<pre><code>IPV4 ADDRESS
+</code></pre>
+<p>里面输入从git上面得到的地址信息</p>
+<p>还是在存放public的仓库，点击
+setting</p>
+<p><img src="../../static/images/%E9%85%8D%E7%BD%AEip.png" alt="配置IP"></p>
+<p>在框内输入刚刚购买的域名，点击
+Save
+然后点击旁边的</p>
+<pre><code>Learn more.
+</code></pre>
+<p><img src="../../static/images/gitpage1.png" alt="gitpage1"></p>
+<p>然后点击第二个</p>
+<p><img src="../../static/images/gitpage2.png" alt="gitpage2"></p>
+<p>翻到这里，然后将下面的这四个地址，分别添加到之前在
+namesilo
+上面的域名配置里面</p>
+<p>然后将自己配制的四个“A”保留，其他的原始配置全部删除。</p>
+<h3 id="至此域名配置完成">至此域名配置完成</h3>
+<h4 id="最后检验一下">最后检验一下</h4>
+<p>打开命令行，输入：</p>
+<pre><code>nslookup 你的域名
+</code></pre>
+<p>如果返回的值里面有你刚才配置的四个地址，那么说明配置成功</p>
+<p>之后就可以通过这个域名访问博客内容</p>
+<h4 id="不过这个域名配置可能需要比较长的时间所以耐心等待就好啦">不过这个域名配置可能需要比较长的时间，所以耐心等待就好啦。</h4>
+<h3 id="这篇关于配置hugo的博客到这里就要结束了感谢观看">这篇关于配置hugo的博客到这里就要结束了，感谢观看。</h3>
+<h6 id="ending">ending</h6>
+
+          </section>
+      </p>
+      
+    </section>
+    <footer class="post-meta">
+        
+            <img class="author-thumb" src="http://example.org/images/user.png" alt="Author image" nopin="nopin" />
+        
+        
+            errgou
+        
+        
+        <time class="post-date" datetime="2020-02-10T20:09:03&#43;08:00">
+            10 Feb 2020
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post posts">
+    <header class="post-header">
         <h2 class="post-title"><a href="/posts/second-post/">Second Post</a></h2>
     </header>
     <section class="post-excerpt">
