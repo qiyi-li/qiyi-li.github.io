@@ -102,16 +102,16 @@
 <p>若返回hugo的版本信息，说明安装正确，即开始下一步</p>
 <h3 id="之后可以按照hugo官网给出的指示一步步完成配置信息">之后可以按照hugo官网给出的指示一步步完成配置信息</h3>
 <p>点击“Quick Start”</p>
-<p><img src="/static/images/%E4%B8%BB%E9%A1%B5.png" alt="主页图片"></p>
+<p><img src="/images/%E4%B8%BB%E9%A1%B5.png" alt="主页图片"></p>
 <h4 id="第一步安装并配置环境变量这一步已经执行">第一步：安装并配置环境变量（这一步已经执行）</h4>
-<p><img src="/static/images/1.png" alt="配置变量"></p>
+<p><img src="/images/1.png" alt="配置变量"></p>
 <h4 id="第二步建立一个属于博客的文件夹">第二步：建立一个属于博客的文件夹</h4>
-<p><img src="/static/images/2.png" alt="建立文件夹"></p>
+<p><img src="/images/2.png" alt="建立文件夹"></p>
 <pre><code>hugo new site quickstart
 </code></pre>
 <p>当中“quickstart”是文件夹名称，可以命名为: git名称.github.io-creator，易于理解</p>
 <h4 id="第三步下载主题">第三步：下载主题</h4>
-<p><img src="/static/images/3.png" alt="配置本地仓库"></p>
+<p><img src="/images/3.png" alt="配置本地仓库"></p>
 <pre><code>cd 刚才的目录
 git init
 git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
@@ -124,7 +124,7 @@ echo 'theme = &quot;ananke&quot;' &gt;&gt; config.toml
 <li>然后配置它</li>
 </ol>
 <h4 id="第四步建立一个页面">第四步：建立一个页面</h4>
-<p><img src="/static/images/4.png" alt="建立页面"></p>
+<p><img src="/images/4.png" alt="建立页面"></p>
 <pre><code>hugo new posts/博客主题.md
 </code></pre>
 <p>之后默认内容如下 ：</p>
@@ -137,7 +137,7 @@ draft: true
 <p>之后可以在&mdash;之下编写博客内容</p>
 <p>写完之后记得将上方的&quot;draft: true&quot;更改为：&rdquo; draft: false&rdquo;</p>
 <h4 id="第五步-启动hugo服务器">第五步 ：启动hugo服务器</h4>
-<p><img src="/static/images/5.png" alt="服务器"></p>
+<p><img src="/images/5.png" alt="服务器"></p>
 <p>在命令行内输入以下代码：</p>
 <pre><code>hugo server -D
 </code></pre>
@@ -166,7 +166,7 @@ Press Ctrl+C to stop
 <a href="http://localhost:1313/"> http://localhost:1313/</a></p>
 <p>即可在网页当中打开刚才编辑的博客</p>
 <h4 id="第六步自定义网站配置">第六步：自定义网站配置</h4>
-<p><img src="/static/images/6.png" alt="网站配置">
+<p><img src="/images/6.png" alt="网站配置">
 打开初始文件夹当中的: config.toml</p>
 <pre><code>baseURL = &quot;https://example.org/&quot;
 languageCode = &quot;en-us&quot;
@@ -179,7 +179,7 @@ theme = &quot;ananke&quot;
 <pre><code>theme = &quot;ananke&quot;
 </code></pre>
 <p>可以在官网的<a href="https://themes.gohugo.io/">主题区</a>,选择心仪的主题
-<img src="/static/images/theme.png" alt="theme"></p>
+<img src="/images/theme.png" alt="theme"></p>
 <p>点击进去，找到下面这样的下载链接：</p>
 <pre><code>git clone https://github.com/kimcc/hugo-theme-noteworthy.git themes/noteworthy
 </code></pre>
@@ -190,7 +190,7 @@ config.toml</p>
 </code></pre>
 <p>将&quot;ananke&quot;更换为新下载的主题名称，再重新运行即可。</p>
 <h4 id="第七步保存静态页面">第七步：保存静态页面</h4>
-<p><img src="/static/images/7.png" alt="建立静态页面"></p>
+<p><img src="/images/7.png" alt="建立静态页面"></p>
 <p>在命令行运行</p>
 <pre><code>hugo -D
 </code></pre>
@@ -250,32 +250,32 @@ setting</p>
 <p>找到
 GitHub Pages
 ，如果下方没有下图绿色提示</p>
-<p><img src="/static/images/8.png" alt="提示"></p>
+<p><img src="/images/8.png" alt="提示"></p>
 <p>可如此设置</p>
-<p><img src="/static/images/git.png" alt="设置"></p>
+<p><img src="/images/git.png" alt="设置"></p>
 <p>之后点击绿色内部的链接，即可浏览博客内容</p>
 <h2 id="之后就是配置个人域名了">之后就是配置个人域名了</h2>
 <h3 id="首先得有一个域名">首先得有一个域名</h3>
 <p>下面是国外的一个注册域名的网站，价格较为优惠</p>
 <p><a href="https://www.namesilo.com/">https://www.namesilo.com/</a></p>
-<p><img src="/static/images/namesilo.png" alt="namesilo"></p>
+<p><img src="/images/namesilo.png" alt="namesilo"></p>
 <p>可以在中间的搜索框，输入自己心仪的字符串，来查找对应的域名存在与否和价格情况</p>
 <p>点击Login，然后注册一个账号登录。</p>
 <p>选好域名然后添加购物车。</p>
-<p><img src="../../static/images/yuming.png" alt="域名"></p>
+<p><img src="../../images/yuming.png" alt="域名"></p>
 <p>这个选择
 no
 会便宜一些</p>
-<p><img src="../../static/images/no.png" alt="选择"></p>
+<p><img src="../../images/no.png" alt="选择"></p>
 <p>再之后进入付款的界面：</p>
-<p><img src="../../static/images/zhifu.png" alt="支付"></p>
+<p><img src="../../images/zhifu.png" alt="支付"></p>
 <p>选择支付宝，旁边输入支付宝安全邮箱，再之后完成支付即可。</p>
 <p>然后点击右上角的</p>
 <pre><code>Manage My Domains
 </code></pre>
-<p><img src="../../static/images/seting.png" alt="seting">
+<p><img src="../../images/seting.png" alt="seting">
 管理域名，点击蓝色的球</p>
-<p><img src="../../static/images/AAAA.png" alt="ip地址配置"></p>
+<p><img src="../../images/AAAA.png" alt="ip地址配置"></p>
 <p>点击单个
 “A”
 在</p>
@@ -284,15 +284,15 @@ no
 <p>里面输入从git上面得到的地址信息</p>
 <p>还是在存放public的仓库，点击
 setting</p>
-<p><img src="../../static/images/%E9%85%8D%E7%BD%AEip.png" alt="配置IP"></p>
+<p><img src="../../images/%E9%85%8D%E7%BD%AEip.png" alt="配置IP"></p>
 <p>在框内输入刚刚购买的域名，点击
 Save
 然后点击旁边的</p>
 <pre><code>Learn more.
 </code></pre>
-<p><img src="../../static/images/gitpage1.png" alt="gitpage1"></p>
+<p><img src="../../images/gitpage1.png" alt="gitpage1"></p>
 <p>然后点击第二个</p>
-<p><img src="../../static/images/gitpage2.png" alt="gitpage2"></p>
+<p><img src="../../images/gitpage2.png" alt="gitpage2"></p>
 <p>翻到这里，然后将下面的这四个地址，分别添加到之前在
 namesilo
 上面的域名配置里面</p>
