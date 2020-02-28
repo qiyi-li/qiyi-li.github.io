@@ -4,16 +4,31 @@
   
   <url>
     <loc>http://liqiyi.xyz/</loc>
-    <lastmod>2020-02-10T20:09:03+08:00</lastmod>
+    <lastmod>2020-02-28T22:31:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://liqiyi.xyz/posts/hugo%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2020-02-10T20:09:03+08:00</lastmod>
+    <loc>http://liqiyi.xyz/post/js%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</loc>
+    <lastmod>2020-02-28T22:31:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://liqiyi.xyz/post/</loc>
+    <lastmod>2020-02-28T22:31:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://liqiyi.xyz/posts/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</loc>
+    <lastmod>2020-02-28T22:28:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://liqiyi.xyz/posts/</loc>
+    <lastmod>2020-02-28T22:28:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://liqiyi.xyz/posts/hugo%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2020-02-10T20:09:03+08:00</lastmod>
   </url>
   
@@ -25,11 +40,6 @@
   <url>
     <loc>http://liqiyi.xyz/posts/my-first-post/</loc>
     <lastmod>2020-02-10T16:55:48+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://liqiyi.xyz/posts/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
