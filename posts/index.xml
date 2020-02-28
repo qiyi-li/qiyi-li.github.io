@@ -48,5 +48,25 @@ hugo --version  若返回hugo的版本信息，说明安装正确，即开始下
       <description>新年快乐 终于有自己的博客了，希望之后可以多多写一些东西来填满它。</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>http://liqiyi.xyz/posts/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://liqiyi.xyz/posts/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</guid>
+      <description>JS 基本语法 表达式和语句 语句是为了完成某种人物的操作，一般会改变环境变量，例如声明或者赋值等。语句以分号结尾，标志一句结束。
+而表达式则是类似于 1+3 这种为了得到返回值的计算式。
+语句和表达式的区别在于语句是为了进行某种操作，一般情况下不需要返回值；而表达式则是为了得到返回值，所以一定有一个返回值出现。
+书写规范 在 JS 当中大小写是非常敏感的，需要注意两者的区别。而空格和回车对整体代码没有影响，可以适当添加让代码更加清晰。不过需要注意的一个地方就是 return 的后面不能添加回车。
+不需要没条代码都写上注释，则重挑选记录便可。
+可以使用 { } 将代码放在一起组合成代码块，常与 if/while/for 等语句合用。
+标识符 即用来规定各种名称的合理写法，例如变量名或者函数名等。
+在命名的时候可以 除数字之外的字母 、中文 或者 &amp;lsquo;$&amp;rsquo; / &amp;lsquo;_&amp;lsquo;开头，第二位及以后就可使用数字。也可以使用中文作为合法标识符。
+常见的基础语句 if&amp;hellip;else&amp;hellip; 语法规则为
+if(表达式){语句1}else{ 语句2 } [语句 1 在只有一句话的时候可以省略 { } ，不过以防产生歧义，还是写完整比较好]
+switch 适用于多层判断结构。语法结构为：
+switch ( fruit ){case &#39;banana&#39;:console.log( &#39;banana&#39; );break;case &#39;apple&#39;:console.log( &#39;apple&#39; );break;default:console.log( &#39;none&#39; );} [break记得要写上，不然代码有可能一直执行下去] 还有几种类似的逻辑判断语句</description>
+    </item>
+    
   </channel>
 </rss>

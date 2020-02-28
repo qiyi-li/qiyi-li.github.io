@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>errgou的博客 </title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.64.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.1cb140d8ba31d5b2f1114537dd04802a.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="" />
+<meta property="og:description" content="JS 基本语法 表达式和语句 语句是为了完成某种人物的操作，一般会改变环境变量，例如声明或者赋值等。语句以分号结尾，标志一句结束。
+而表达式则是类似于 1&#43;3 这种为了得到返回值的计算式。
+语句和表达式的区别在于语句是为了进行某种操作，一般情况下不需要返回值；而表达式则是为了得到返回值，所以一定有一个返回值出现。
+书写规范 在 JS 当中大小写是非常敏感的，需要注意两者的区别。而空格和回车对整体代码没有影响，可以适当添加让代码更加清晰。不过需要注意的一个地方就是 return 的后面不能添加回车。
+不需要没条代码都写上注释，则重挑选记录便可。
+可以使用 { } 将代码放在一起组合成代码块，常与 if/while/for 等语句合用。
+标识符 即用来规定各种名称的合理写法，例如变量名或者函数名等。
+在命名的时候可以 除数字之外的字母 、中文 或者 &lsquo;$&rsquo; / &lsquo;_&lsquo;开头，第二位及以后就可使用数字。也可以使用中文作为合法标识符。
+常见的基础语句 if&hellip;else&hellip; 语法规则为
+if(表达式){语句1}else{ 语句2 } [语句 1 在只有一句话的时候可以省略 { } ，不过以防产生歧义，还是写完整比较好]
+switch 适用于多层判断结构。语法结构为：
+switch ( fruit ){case &#39;banana&#39;:console.log( &#39;banana&#39; );break;case &#39;apple&#39;:console.log( &#39;apple&#39; );break;default:console.log( &#39;none&#39; );} [break记得要写上，不然代码有可能一直执行下去] 还有几种类似的逻辑判断语句" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://liqiyi.xyz/posts/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" />
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="JS 基本语法 表达式和语句 语句是为了完成某种人物的操作，一般会改变环境变量，例如声明或者赋值等。语句以分号结尾，标志一句结束。
+而表达式则是类似于 1&#43;3 这种为了得到返回值的计算式。
+语句和表达式的区别在于语句是为了进行某种操作，一般情况下不需要返回值；而表达式则是为了得到返回值，所以一定有一个返回值出现。
+书写规范 在 JS 当中大小写是非常敏感的，需要注意两者的区别。而空格和回车对整体代码没有影响，可以适当添加让代码更加清晰。不过需要注意的一个地方就是 return 的后面不能添加回车。
+不需要没条代码都写上注释，则重挑选记录便可。
+可以使用 { } 将代码放在一起组合成代码块，常与 if/while/for 等语句合用。
+标识符 即用来规定各种名称的合理写法，例如变量名或者函数名等。
+在命名的时候可以 除数字之外的字母 、中文 或者 &lsquo;$&rsquo; / &lsquo;_&lsquo;开头，第二位及以后就可使用数字。也可以使用中文作为合法标识符。
+常见的基础语句 if&hellip;else&hellip; 语法规则为
+if(表达式){语句1}else{ 语句2 } [语句 1 在只有一句话的时候可以省略 { } ，不过以防产生歧义，还是写完整比较好]
+switch 适用于多层判断结构。语法结构为：
+switch ( fruit ){case &#39;banana&#39;:console.log( &#39;banana&#39; );break;case &#39;apple&#39;:console.log( &#39;apple&#39; );break;default:console.log( &#39;none&#39; );} [break记得要写上，不然代码有可能一直执行下去] 还有几种类似的逻辑判断语句">
+
+<meta itemprop="wordCount" content="207">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="JS 基本语法 表达式和语句 语句是为了完成某种人物的操作，一般会改变环境变量，例如声明或者赋值等。语句以分号结尾，标志一句结束。
+而表达式则是类似于 1&#43;3 这种为了得到返回值的计算式。
+语句和表达式的区别在于语句是为了进行某种操作，一般情况下不需要返回值；而表达式则是为了得到返回值，所以一定有一个返回值出现。
+书写规范 在 JS 当中大小写是非常敏感的，需要注意两者的区别。而空格和回车对整体代码没有影响，可以适当添加让代码更加清晰。不过需要注意的一个地方就是 return 的后面不能添加回车。
+不需要没条代码都写上注释，则重挑选记录便可。
+可以使用 { } 将代码放在一起组合成代码块，常与 if/while/for 等语句合用。
+标识符 即用来规定各种名称的合理写法，例如变量名或者函数名等。
+在命名的时候可以 除数字之外的字母 、中文 或者 &lsquo;$&rsquo; / &lsquo;_&lsquo;开头，第二位及以后就可使用数字。也可以使用中文作为合法标识符。
+常见的基础语句 if&hellip;else&hellip; 语法规则为
+if(表达式){语句1}else{ 语句2 } [语句 1 在只有一句话的时候可以省略 { } ，不过以防产生歧义，还是写完整比较好]
+switch 适用于多层判断结构。语法结构为：
+switch ( fruit ){case &#39;banana&#39;:console.log( &#39;banana&#39; );break;case &#39;apple&#39;:console.log( &#39;apple&#39; );break;default:console.log( &#39;none&#39; );} [break记得要写上，不然代码有可能一直执行下去] 还有几种类似的逻辑判断语句"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://liqiyi.xyz/" class="f3 fw2 hover-white no-underline white-90 dib">
+      errgou的博客
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=http://liqiyi.xyz/posts/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=http://liqiyi.xyz/posts/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/&amp;text=" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://liqiyi.xyz/posts/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/&amp;title=" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="0001-01-01T00:00:00Z">January 1, 0001</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h1 id="js-基本语法">JS 基本语法</h1>
+<h3 id="表达式和语句">表达式和语句</h3>
+<p>语句是为了完成某种人物的操作，一般会改变环境变量，例如声明或者赋值等。语句以分号结尾，标志一句结束。</p>
+<p>而表达式则是类似于 1+3 这种为了得到返回值的计算式。</p>
+<p>语句和表达式的区别在于语句是为了进行某种操作，一般情况下不需要返回值；而表达式则是为了得到返回值，所以一定有一个返回值出现。</p>
+<h3 id="书写规范">书写规范</h3>
+<p>在 JS 当中大小写是非常敏感的，需要注意两者的区别。而空格和回车对整体代码没有影响，可以适当添加让代码更加清晰。不过需要注意的一个地方就是 return 的后面不能添加回车。</p>
+<p>不需要没条代码都写上注释，则重挑选记录便可。</p>
+<p>可以使用 { } 将代码放在一起组合成代码块，常与 if/while/for 等语句合用。</p>
+<h3 id="标识符">标识符</h3>
+<p>即用来规定各种名称的合理写法，例如变量名或者函数名等。</p>
+<p>在命名的时候可以 除数字之外的字母 、中文 或者 &lsquo;$&rsquo; / &lsquo;_&lsquo;开头，第二位及以后就可使用数字。也可以使用中文作为合法标识符。</p>
+<h3 id="常见的基础语句">常见的基础语句</h3>
+<h4 id="ifelse">if&hellip;else&hellip;</h4>
+<p>语法规则为</p>
+<pre><code>if(表达式)
+{
+ 语句1
+ }else{ 语句2 }
+</code></pre>
+<p>[语句 1 在只有一句话的时候可以省略 { } ，不过以防产生歧义，还是写完整比较好]</p>
+<h4 id="switch">switch</h4>
+<p>适用于多层判断结构。语法结构为：</p>
+<pre><code>switch ( fruit ){
+case 'banana':
+console.log( 'banana' );
+break;
+case 'apple':
+console.log( 'apple' );
+break;
+default:
+console.log( 'none' );
+}
+</code></pre>
+<p>[<code>break</code>记得要写上，不然代码有可能一直执行下去]
+还有几种类似的逻辑判断语句</p>
+<ul>
+<li>
+<p>表达式 1 ? 表达式 2 : 表达式 3</p>
+<ul>
+<li>意为判断表达式 1，如果值为 true，则执行表达式 2，否则执行表达式 3</li>
+<li>可以用来代替 if else 结构</li>
+</ul>
+</li>
+<li>
+<p>A &amp;&amp; B &amp;&amp; C &amp;&amp; D</p>
+<ul>
+<li>如果 A 正确就取 B，B 正确再执行 C，C 正确再取 D. 即取第一个假值，或者执行 D。</li>
+</ul>
+</li>
+<li>
+<p>A || B || C || D</p>
+<ul>
+<li>和上面那个相反，取第一个真的值，或者 D</li>
+</ul>
+</li>
+</ul>
+<h4 id="while-循环">while 循环</h4>
+<p>语法为：</p>
+<pre><code>while( 表达式 )
+{ 语句 }
+</code></pre><p>意为：判断表达式的真假，如果为真，执行语句，之后再判断表达式的真假；当表达式为假则执行之后的语句。</p>
+<h4 id="for-循环">for 循环</h4>
+<p>为 <code>while</code>的简单写法，语法为：</p>
+<pre><code>for(语句1;表达式2;语句3){
+循环体
+}
+</code></pre><p>先执行语句 1，然后判断表达式 2，如果为真，那么执行循环体，再执行语句 3；如果为假就直接退出循环，执行之后的语句。</p>
+<h4 id="break-和-continue">break 和 continue</h4>
+<p>break 用于退出所有的循环.</p>
+<p>continue 则用于推出当前一次循环。</p>
+<p>break：</p>
+<pre><code>for (var i = 0; i &lt; 5; i++) {
+  console.log(i);
+  if (i === 3)
+    break;
+}
+</code></pre><p>这段代码再执行到 i=3 的时候，就会终止循环。</p>
+<p>continue：</p>
+<pre><code>var i = 0;
+while (i &lt; 100){
+  i++;
+  if (i % 2 === 0) continue;
+  console.log('i 当前为：' + i);
+}
+</code></pre><p>在 i 为偶数的时候，就会执行 continue，跳出当前循环直接执行下一轮。</p>
+<h4 id="label-标签">label 标签</h4>
+<p>标签格式如下：</p>
+<pre><code>lable:
+  语句
+</code></pre>
+<p>标签可以是任意标识符，但不能是保留字，语句可以是任意语句。
+也可以用于跳出代码块</p>
+<pre><code>foo: {
+  console.log(1);
+  break foo;
+  console.log('本行不会输出');
+}
+console.log(2);
+</code></pre><p>在执行到 break foo 的时候，就会跳出区块。</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://liqiyi.xyz/" >
+    &copy;  errgou的博客 2020 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>
