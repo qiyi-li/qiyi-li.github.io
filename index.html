@@ -34,7 +34,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://liqiyi.xyz/" />
-<meta property="og:updated_time" content="2020-02-28T22:31:00+08:00" />
+<meta property="og:updated_time" content="2020-03-01T15:03:04+08:00" />
 <meta itemprop="name" content="errgou的博客">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="errgou的博客"/>
@@ -122,6 +122,34 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="http://liqiyi.xyz/posts/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" class="color-inherit dim link">
+            JS对象的基本用法
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          对象的定义和写法 定义： 对象是一个 无序的，由键值对组成的集合。
+有两种声明的方式：
+let obj = {name :'ergou',age:18} //多组数据可以用 ',' 隔开，这种为新的书写方式 let obj = new Object({name:'ergou'}) //这种一次只能添加一个属性，是以前的写法 // 属性名为字符串，可以是任意字符。如果不是标识符的话，就需要加上引号。 symbol 也可以作为属性名 当中的 &lsquo;name&rsquo; 为 key，即属性名; 后面的 &lsquo;ergou&rsquo; 为 value ，即属性值
+let a = 'name' let obj = { [a]:'ergou' } //这样的话，属性名就是变量 a 的值，为'name' let obj = { a:'ergou' } //这样属性名就是 'a' // 属性名没有添加[] 的话，会自动变为字符串。 JS 的每一个对象中都含有一个隐藏属性，这个隐藏属性中存储着共有属性组成的对象地址，这个共有属性的对象被称作原型。即原型当中存储着对象的共有属性。这个原型的原型值为 null
+let obj = () obj {} __proto__:Object JS 的增删改查 删除对象中的属性 如何删除一个属性
+        </div>
+          <a href="http://liqiyi.xyz/posts/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="http://liqiyi.xyz/posts/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="color-inherit dim link">
             JS的基本语法
             </a>
@@ -183,36 +211,18 @@ hugo --version  若返回hugo的版本信息，说明安装正确，即开始下
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://liqiyi.xyz/posts/second-post/" class="color-inherit dim link">
-            Second Post
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          第二个测试博客 
-        </div>
-          <a href="http://liqiyi.xyz/posts/second-post/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="http://liqiyi.xyz/posts/second-post/" class="link black dim">
+              Second Post
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="http://liqiyi.xyz/posts/my-first-post/" class="link black dim">

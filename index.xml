@@ -6,10 +6,23 @@
     <description>Recent content on errgou的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Fri, 28 Feb 2020 22:31:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 01 Mar 2020 15:03:04 +0800</lastBuildDate>
     
 	<atom:link href="http://liqiyi.xyz/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JS对象的基本用法</title>
+      <link>http://liqiyi.xyz/posts/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Sun, 01 Mar 2020 15:03:04 +0800</pubDate>
+      
+      <guid>http://liqiyi.xyz/posts/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</guid>
+      <description>对象的定义和写法 定义： 对象是一个 无序的，由键值对组成的集合。
+有两种声明的方式：
+let obj = {name :&#39;ergou&#39;,age:18} //多组数据可以用 &#39;,&#39; 隔开，这种为新的书写方式 let obj = new Object({name:&#39;ergou&#39;}) //这种一次只能添加一个属性，是以前的写法 // 属性名为字符串，可以是任意字符。如果不是标识符的话，就需要加上引号。 symbol 也可以作为属性名 当中的 &amp;lsquo;name&amp;rsquo; 为 key，即属性名; 后面的 &amp;lsquo;ergou&amp;rsquo; 为 value ，即属性值
+let a = &#39;name&#39; let obj = { [a]:&#39;ergou&#39; } //这样的话，属性名就是变量 a 的值，为&#39;name&#39; let obj = { a:&#39;ergou&#39; } //这样属性名就是 &#39;a&#39; // 属性名没有添加[] 的话，会自动变为字符串。 JS 的每一个对象中都含有一个隐藏属性，这个隐藏属性中存储着共有属性组成的对象地址，这个共有属性的对象被称作原型。即原型当中存储着对象的共有属性。这个原型的原型值为 null
+let obj = () obj {} __proto__:Object JS 的增删改查 删除对象中的属性 如何删除一个属性</description>
+    </item>
     
     <item>
       <title>JS的基本语法</title>
