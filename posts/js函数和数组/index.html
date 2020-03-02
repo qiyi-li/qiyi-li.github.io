@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>errgou的博客  | JS函数和数组</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.64.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.1cb140d8ba31d5b2f1114537dd04802a.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="JS函数和数组" />
+<meta property="og:description" content="创建一个数组  新建数组  let arr = [1,2,3] let arr = newArray(1,2,3) let arr = newArray(3) //当只有一个参数时，只会定义数组的长度  数组转化  let arr = &#39;1,2,3&#39;.split(&#39;,&#39;) let arr = &#39;123&#39;.split(&#39;&#39;) let arr = &#39;abcde&#39;.split(&#39;&#39;)//将字符串转化为数组 Array.from(&#39;123&#39;) Array.from({0:&#39;a&#39;,1:&#39;b&#39;,2:&#39;c&#39;,3:&#39;d&#39;,length:4)}//可以将一个属性名为0 1 2 3 的对象，加上长度后转化为数组。 //如果 0 1 2 3 之中缺少一个属性名，那么会自动补上一个值为 undefined 的属性名  伪数组  // 没有数组共同属性的数组，即是伪数组 array = {0:&#39;a&#39;,1:&#39;b&#39;,2:&#39;c&#39;,3:&#39;d&#39;,length:4}  合并两个数组  arr1.concat.arr2  截取数组的一部分  arr1.slice(1) //从数组 arr1 中第二个元素开始，截取一个元素。不会影响原先的数组 arr1.slice(0) //全部截取（也是复制一个数组的方式） 数组元素的增删改查 删除元素 let arr = [1,2,3] delete arr[0] //删除第一个数值，但是会保留这个数值的位置，长度依然不变。 //数字小于长度的数组成为稀疏数组 //改变数组的length let arr = [1,2,3,4,5] arr." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://liqiyi.xyz/posts/js%E5%87%BD%E6%95%B0%E5%92%8C%E6%95%B0%E7%BB%84/" />
+<meta property="article:published_time" content="2020-03-02T21:27:22+08:00" />
+<meta property="article:modified_time" content="2020-03-02T21:27:22+08:00" />
+<meta itemprop="name" content="JS函数和数组">
+<meta itemprop="description" content="创建一个数组  新建数组  let arr = [1,2,3] let arr = newArray(1,2,3) let arr = newArray(3) //当只有一个参数时，只会定义数组的长度  数组转化  let arr = &#39;1,2,3&#39;.split(&#39;,&#39;) let arr = &#39;123&#39;.split(&#39;&#39;) let arr = &#39;abcde&#39;.split(&#39;&#39;)//将字符串转化为数组 Array.from(&#39;123&#39;) Array.from({0:&#39;a&#39;,1:&#39;b&#39;,2:&#39;c&#39;,3:&#39;d&#39;,length:4)}//可以将一个属性名为0 1 2 3 的对象，加上长度后转化为数组。 //如果 0 1 2 3 之中缺少一个属性名，那么会自动补上一个值为 undefined 的属性名  伪数组  // 没有数组共同属性的数组，即是伪数组 array = {0:&#39;a&#39;,1:&#39;b&#39;,2:&#39;c&#39;,3:&#39;d&#39;,length:4}  合并两个数组  arr1.concat.arr2  截取数组的一部分  arr1.slice(1) //从数组 arr1 中第二个元素开始，截取一个元素。不会影响原先的数组 arr1.slice(0) //全部截取（也是复制一个数组的方式） 数组元素的增删改查 删除元素 let arr = [1,2,3] delete arr[0] //删除第一个数值，但是会保留这个数值的位置，长度依然不变。 //数字小于长度的数组成为稀疏数组 //改变数组的length let arr = [1,2,3,4,5] arr.">
+<meta itemprop="datePublished" content="2020-03-02T21:27:22&#43;08:00" />
+<meta itemprop="dateModified" content="2020-03-02T21:27:22&#43;08:00" />
+<meta itemprop="wordCount" content="435">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="JS函数和数组"/>
+<meta name="twitter:description" content="创建一个数组  新建数组  let arr = [1,2,3] let arr = newArray(1,2,3) let arr = newArray(3) //当只有一个参数时，只会定义数组的长度  数组转化  let arr = &#39;1,2,3&#39;.split(&#39;,&#39;) let arr = &#39;123&#39;.split(&#39;&#39;) let arr = &#39;abcde&#39;.split(&#39;&#39;)//将字符串转化为数组 Array.from(&#39;123&#39;) Array.from({0:&#39;a&#39;,1:&#39;b&#39;,2:&#39;c&#39;,3:&#39;d&#39;,length:4)}//可以将一个属性名为0 1 2 3 的对象，加上长度后转化为数组。 //如果 0 1 2 3 之中缺少一个属性名，那么会自动补上一个值为 undefined 的属性名  伪数组  // 没有数组共同属性的数组，即是伪数组 array = {0:&#39;a&#39;,1:&#39;b&#39;,2:&#39;c&#39;,3:&#39;d&#39;,length:4}  合并两个数组  arr1.concat.arr2  截取数组的一部分  arr1.slice(1) //从数组 arr1 中第二个元素开始，截取一个元素。不会影响原先的数组 arr1.slice(0) //全部截取（也是复制一个数组的方式） 数组元素的增删改查 删除元素 let arr = [1,2,3] delete arr[0] //删除第一个数值，但是会保留这个数值的位置，长度依然不变。 //数字小于长度的数组成为稀疏数组 //改变数组的length let arr = [1,2,3,4,5] arr."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://liqiyi.xyz/" class="f3 fw2 hover-white no-underline white-90 dib">
+      errgou的博客
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=http://liqiyi.xyz/posts/js%E5%87%BD%E6%95%B0%E5%92%8C%E6%95%B0%E7%BB%84/" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=http://liqiyi.xyz/posts/js%E5%87%BD%E6%95%B0%E5%92%8C%E6%95%B0%E7%BB%84/&amp;text=JS%e5%87%bd%e6%95%b0%e5%92%8c%e6%95%b0%e7%bb%84" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://liqiyi.xyz/posts/js%E5%87%BD%E6%95%B0%E5%92%8C%E6%95%B0%E7%BB%84/&amp;title=JS%e5%87%bd%e6%95%b0%e5%92%8c%e6%95%b0%e7%bb%84" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+      <h1 class="f1 athelas mt3 mb1">JS函数和数组</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-03-02T21:27:22&#43;08:00">March 2, 2020</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="创建一个数组">创建一个数组</h2>
+<ul>
+<li>新建数组</li>
+</ul>
+<pre><code>let arr = [1,2,3]
+
+let arr = newArray(1,2,3)
+
+let arr = newArray(3)  //当只有一个参数时，只会定义数组的长度
+
+</code></pre><ul>
+<li>数组转化</li>
+</ul>
+<pre><code>let arr = '1,2,3'.split(',')
+
+let arr = '123'.split('')
+let arr = 'abcde'.split('')//将字符串转化为数组
+
+Array.from('123')
+Array.from({0:'a',1:'b',2:'c',3:'d',length:4)}//可以将一个属性名为0 1 2 3 的对象，加上长度后转化为数组。
+//如果 0 1 2 3 之中缺少一个属性名，那么会自动补上一个值为 undefined 的属性名
+</code></pre><ul>
+<li>伪数组</li>
+</ul>
+<pre><code>// 没有数组共同属性的数组，即是伪数组
+array = {0:'a',1:'b',2:'c',3:'d',length:4}
+</code></pre><ul>
+<li>合并两个数组</li>
+</ul>
+<pre><code>arr1.concat.arr2
+</code></pre><ul>
+<li>截取数组的一部分</li>
+</ul>
+<pre><code>arr1.slice(1) //从数组 arr1 中第二个元素开始，截取一个元素。不会影响原先的数组
+arr1.slice(0) //全部截取（也是复制一个数组的方式）
+</code></pre><h2 id="数组元素的增删改查">数组元素的增删改查</h2>
+<h3 id="删除元素">删除元素</h3>
+<pre><code>let arr = [1,2,3]
+delete arr[0]
+//删除第一个数值，但是会保留这个数值的位置，长度依然不变。
+//数字小于长度的数组成为稀疏数组
+
+//改变数组的length
+let arr = [1,2,3,4,5]
+arr.length = 1
+arr = [1]  //如此直接定义长度，会让后面的数字消失。
+</code></pre><p>正确的方法</p>
+<pre><code>arr.shift() //删除头部元素，并且返回被删除的元素
+
+arr.pop() //删除尾部元素，并且返回被删除元素
+
+arr.splice(index,x) //自第 index个数字起，删除 x 个元素
+
+arr.splice(index,1,'x') // 将第 index 个元素替换为 'x'
+
+arr.splice(index,1,'x','y') //删除第 index 个元素，更换为 'x','y'
+</code></pre><h3 id="查看数组内元素">查看数组内元素</h3>
+<p>查看所有的属性名（和对象查看方式相似）</p>
+<pre><code>let arr = [1,2,3,4,5];
+arr.x = 'xxx' //在 arr 里面添加一个名为 x ，值伪 'xxx' 的元素
+
+Object.keys(arr) //打印出数组的名，结果为: 0,1,2,3,4,x
+
+for (let key in arr){
+    console.log(`${key} : ${arr[key]}`)
+}
+// in 是指自动遍历所有的 key ，取值最大为数组长度，所以最后一个值会有 bug。 '$' 表示后面跟可以跟变量
+</code></pre><p>查看数字（字符串）属性名和值</p>
+<pre><code>//采用 for 循环
+for (let i = 0; i&lt;arr.length ; i++){
+    console.log(`$[i] : ${arr[i]}`)
+}
+
+arr.forEach(function( item,index ){
+    console.log(`${index} : ${item}`)
+})
+
+//forEach 函数详情
+function forEach(array , fn){
+    for(let i = 0; i&lt;array.length; i++){
+        fn(array[i],i,array)
+    }
+}// 定义函数：forEach 输入数组 和函数，
+forEach(['a','b','c'],function(x,y,z){
+    console.log(x,y,z)
+}) //调用函数
+
+//for 循环相比较 forEach ，中途可以通过break 或 continue 终止循环
+</code></pre><p>查看单个属性</p>
+<pre><code>let arr = [1,2,3]
+arr[0] = 1
+
+arr[arr.length] === undefined//当索引的值超出数组的范围时，会返回值 undefined
+
+arr.indexOf(item) //查看元素 item 是否在数组里，是的话返回索引，否返回-1
+
+arr.find(item =&gt; item%2===0)//条件索引。找到第一个偶数
+arr,findIndex(item =&gt; item%2 === 0)// 找到第一个偶数的编号
+</code></pre><h3 id="增加数组的元素">增加数组的元素</h3>
+<p>在尾部增加元素</p>
+<pre><code>arr.push(newItem)
+arr.push(item1,item2)
+//在尾部增加元素，并且返回新的长度
+
+arr.unshift(newItem)
+arr.unshift(item1,item2)
+//在头部增加元素
+
+arr.splice(index,0,'x','y')
+// 在index处，删除 0个元素，添加'x' 和 'y'
+</code></pre><p>修改顺序</p>
+<pre><code>arr.reverse() //反转数组arr 的顺序
+
+
+let arr = [1,2,3,4,5,6,7]
+arr.sort(function(a,b){
+    if(a&gt;b){return 1}
+    else if( a===b ){return 0}
+    else{return -1}
+})     //比较 a b 的大小，若a&gt;b，返回1，a=b,返回 0 ，a&lt;b 返回-1. 按照返回值由小到大排序，排序结果为从小到大。  更改return 值即可完成逆排序
+
+
+let arr = [ {name:'小明',score:99} ,{name: '小红',score:97},{name: '小花',score:88}]
+arr.sort(function(a,b){
+    if(a.score &gt; b.score){return 1}
+    else if(a.score === b.score){return 0}
+    else{return -1}
+})
+//简写为：
+
+arr.sort((a,b) =&gt; a.score - b.score)
+//判断 a b 两者分数的差，默认小的排在前面
+
+
+let s = 'a,b,c,d,e'
+s.split('')
+
+s.split('').reverse()
+
+s.split('').reverse().join('')
+//将字符串重新排序
+</code></pre><h2 id="数组变换">数组变换</h2>
+<p>map filter reduce 这三个变换不会影响到原先的数组</p>
+<p>map n=&gt;n</p>
+<pre><code>arr.map( item =&gt; item*item )   //将 arr 内的每个 item 取平方
+
+
+let arr = [0,1,2,2,3,3,3,4,4,4,4,6]
+let arr2 = arr.map( index =&gt;
+    {return {0:'周日',1:'周一',2:'周二',3:'周三',4:'周四',5:'周五',6:'周六'}[index]}
+
+)
+console.log(arr2) // ['周日', '周一', '周二', '周二', '周三', '周三', '周三', '周四', '周四', '周四', '周四','周六']
+
+</code></pre><p>filter n 变少</p>
+<pre><code>arr.filter( item =&gt; item %2 ===0 ? true : false )
+//判断 item 是否可被 2 整除，保留 true ，删除 false
+// item%2 === 0 ?  自会返回 true 和 false值，所以后面的呢 true:false 可以省略
+</code></pre><p>reduce n 变 1</p>
+<pre><code>arr.reduce((sum,item) =&gt; {return sum+item} , 0 )
+//初始的 sum 为 0，将 sum+item 作为新的 sum 再和下一个 item 相加。
+
+
+arr.reduce((result,item) =&gt; {return result.concat( item*item )}, [] )
+//初始为空数组 []，将 result和item*item 结合成为新的数组，再和下一个 item*item 结合成新数组，最终得到原先数组每个 item 的平方
+
+
+
+arr.reduce( (result,item) =&gt;{
+    if(item%2===0){return result.concat(item)}
+    else{return  result}
+} ,[])
+
+
+// 简写为：
+
+arr.reduce((result,item) =&gt; result.concat(item%2===0? item : []),[])
+//初始result为 [] 数组 , 如果 item整除2，就concat(item), 否则 concat([]), 这样就可以筛选出数组中的偶数
+</code></pre><h5 id="ending">ending</h5>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://liqiyi.xyz/" >
+    &copy;  errgou的博客 2020 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

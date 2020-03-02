@@ -6,10 +6,19 @@
     <description>Recent content in Posts on errgou的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Sun, 01 Mar 2020 15:03:04 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 02 Mar 2020 21:27:22 +0800</lastBuildDate>
     
 	<atom:link href="http://liqiyi.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JS函数和数组</title>
+      <link>http://liqiyi.xyz/posts/js%E5%87%BD%E6%95%B0%E5%92%8C%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Mon, 02 Mar 2020 21:27:22 +0800</pubDate>
+      
+      <guid>http://liqiyi.xyz/posts/js%E5%87%BD%E6%95%B0%E5%92%8C%E6%95%B0%E7%BB%84/</guid>
+      <description>创建一个数组  新建数组  let arr = [1,2,3] let arr = newArray(1,2,3) let arr = newArray(3) //当只有一个参数时，只会定义数组的长度  数组转化  let arr = &#39;1,2,3&#39;.split(&#39;,&#39;) let arr = &#39;123&#39;.split(&#39;&#39;) let arr = &#39;abcde&#39;.split(&#39;&#39;)//将字符串转化为数组 Array.from(&#39;123&#39;) Array.from({0:&#39;a&#39;,1:&#39;b&#39;,2:&#39;c&#39;,3:&#39;d&#39;,length:4)}//可以将一个属性名为0 1 2 3 的对象，加上长度后转化为数组。 //如果 0 1 2 3 之中缺少一个属性名，那么会自动补上一个值为 undefined 的属性名  伪数组  // 没有数组共同属性的数组，即是伪数组 array = {0:&#39;a&#39;,1:&#39;b&#39;,2:&#39;c&#39;,3:&#39;d&#39;,length:4}  合并两个数组  arr1.concat.arr2  截取数组的一部分  arr1.slice(1) //从数组 arr1 中第二个元素开始，截取一个元素。不会影响原先的数组 arr1.slice(0) //全部截取（也是复制一个数组的方式） 数组元素的增删改查 删除元素 let arr = [1,2,3] delete arr[0] //删除第一个数值，但是会保留这个数值的位置，长度依然不变。 //数字小于长度的数组成为稀疏数组 //改变数组的length let arr = [1,2,3,4,5] arr.</description>
+    </item>
     
     <item>
       <title>JS对象的基本用法</title>

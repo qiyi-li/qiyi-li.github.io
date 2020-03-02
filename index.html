@@ -34,7 +34,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://liqiyi.xyz/" />
-<meta property="og:updated_time" content="2020-03-01T15:03:04+08:00" />
+<meta property="og:updated_time" content="2020-03-02T21:27:22+08:00" />
 <meta itemprop="name" content="errgou的博客">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="errgou的博客"/>
@@ -122,6 +122,30 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="http://liqiyi.xyz/posts/js%E5%87%BD%E6%95%B0%E5%92%8C%E6%95%B0%E7%BB%84/" class="color-inherit dim link">
+            JS函数和数组
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          创建一个数组  新建数组  let arr = [1,2,3] let arr = newArray(1,2,3) let arr = newArray(3) //当只有一个参数时，只会定义数组的长度  数组转化  let arr = '1,2,3'.split(',') let arr = '123'.split('') let arr = 'abcde'.split('')//将字符串转化为数组 Array.from('123') Array.from({0:'a',1:'b',2:'c',3:'d',length:4)}//可以将一个属性名为0 1 2 3 的对象，加上长度后转化为数组。 //如果 0 1 2 3 之中缺少一个属性名，那么会自动补上一个值为 undefined 的属性名  伪数组  // 没有数组共同属性的数组，即是伪数组 array = {0:'a',1:'b',2:'c',3:'d',length:4}  合并两个数组  arr1.concat.arr2  截取数组的一部分  arr1.slice(1) //从数组 arr1 中第二个元素开始，截取一个元素。不会影响原先的数组 arr1.slice(0) //全部截取（也是复制一个数组的方式） 数组元素的增删改查 删除元素 let arr = [1,2,3] delete arr[0] //删除第一个数值，但是会保留这个数值的位置，长度依然不变。 //数字小于长度的数组成为稀疏数组 //改变数组的length let arr = [1,2,3,4,5] arr.
+        </div>
+          <a href="http://liqiyi.xyz/posts/js%E5%87%BD%E6%95%B0%E5%92%8C%E6%95%B0%E7%BB%84/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="http://liqiyi.xyz/posts/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" class="color-inherit dim link">
             JS对象的基本用法
             </a>
@@ -177,46 +201,18 @@ switch ( fruit ){case 'banana':console.log( 'banana' );break;case 'apple':c
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://liqiyi.xyz/posts/hugo%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/" class="color-inherit dim link">
-            Hugo博客的搭建
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          通过Hugo 和 Git，搭建一个属于自己的博客 首先需要先下载Hugo的安装包：  可以直接在 Google 搜索 Hugo Releases  点击第一个链接https://github.com/gohugoio/hugo/releases
-然后选择自己电脑对应的版本“hugo_0.64.1_Windows-64bit.zip”
-依旧在D:\Software建立文件夹：hugo，将文件“hugo.exe”放置其中，并按照如下步骤配置环境变量
-对我的电脑&gt;右键选择属性&gt;高级系统设置&gt;环境变量&gt;点击下方的Path&gt;点击新建&gt;将hugo的路径粘贴至此即可
-接着在通过cmder输入命令行
-hugo --version  若返回hugo的版本信息，说明安装正确，即开始下一步
-之后可以按照hugo官网给出的指示一步步完成配置信息 点击“Quick Start”
-第一步：安装并配置环境变量（这一步已经执行） 第二步：建立一个属于博客的文件夹 hugo new site quickstart  当中“quickstart”是文件夹名称，可以命名为: git名称.github.io-creator，易于理解
-第三步：下载主题 cd 刚才的目录 git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke echo 'theme = &quot;ananke&quot;' &gt;&gt; config.toml  这一步目的是：
- 建立一个.git本地仓库 下载一个名为&quot;ananke&quot;的主题 然后配置它  第四步：建立一个页面 hugo new posts/博客主题.md  之后默认内容如下 ：
---- title: &quot;博客主题&quot; date: 2019-03-26T08:47:11+01:00 draft: true ---  之后可以在&mdash;之下编写博客内容
-        </div>
-          <a href="http://liqiyi.xyz/posts/hugo%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="http://liqiyi.xyz/posts/hugo%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/" class="link black dim">
+              Hugo博客的搭建
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="http://liqiyi.xyz/posts/second-post/" class="link black dim">
