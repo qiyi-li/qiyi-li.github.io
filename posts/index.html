@@ -34,7 +34,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://liqiyi.xyz/posts/" />
-<meta property="og:updated_time" content="2020-03-02T21:27:22+08:00" />
+<meta property="og:updated_time" content="2020-03-04T13:59:59+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -91,6 +91,24 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://liqiyi.xyz/posts/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/" class="link black dim">
+        JS函数的执行时机
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      S 的执行顺序一般是从上往下依次进行，比如下面这个函数， 先是声明了 i ，然后利用 for 循环，将 i 不断 +1 ，依次打出。打印结果依次为: 0 1 2 3 4 5
+let i = 0 for(i =0; i&lt;6; i++){ console.log(i) } 如果这时在 for 循环内添加一个延时执行函数，那么结果就会发生变化，将打印出 6 个 6
+let i = 0 for(i = 0; i&lt;6; i++){ setTimeout(()=&gt;{ console.log(i) },0) } 我们可以在 setTimeout 后面加上一句，以此判断函数的执行顺序。
+let i = 0 for(i=0;i&lt;6;i++){ setTimeout(()=&gt;{ console.log(i) },0) console.log(i) } // 结果为： 0 1 2 3 4 5 6 6 6 6 6 6 当执行到延时函数 setTimeout 时，JS 会先跳过，将 setTimeout 函数放在另一个地方，继续执行 for 循环。打出 0 1 2 3 4 5 ,当 for 循环执行完毕之后，再将 setTimeout 函数取出执行，在这个时候 i 经过 for 循环已经变成了 6 ，所以之后 setTimeout 打印出的结果就都是 6 .
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">

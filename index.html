@@ -34,7 +34,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://liqiyi.xyz/" />
-<meta property="og:updated_time" content="2020-03-02T21:27:22+08:00" />
+<meta property="og:updated_time" content="2020-03-04T13:59:59+08:00" />
 <meta itemprop="name" content="errgou的博客">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="errgou的博客"/>
@@ -122,6 +122,33 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="http://liqiyi.xyz/posts/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/" class="color-inherit dim link">
+            JS函数的执行时机
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          S 的执行顺序一般是从上往下依次进行，比如下面这个函数， 先是声明了 i ，然后利用 for 循环，将 i 不断 +1 ，依次打出。打印结果依次为: 0 1 2 3 4 5
+let i = 0 for(i =0; i&lt;6; i++){ console.log(i) } 如果这时在 for 循环内添加一个延时执行函数，那么结果就会发生变化，将打印出 6 个 6
+let i = 0 for(i = 0; i&lt;6; i++){ setTimeout(()=&gt;{ console.log(i) },0) } 我们可以在 setTimeout 后面加上一句，以此判断函数的执行顺序。
+let i = 0 for(i=0;i&lt;6;i++){ setTimeout(()=&gt;{ console.log(i) },0) console.log(i) } // 结果为： 0 1 2 3 4 5 6 6 6 6 6 6 当执行到延时函数 setTimeout 时，JS 会先跳过，将 setTimeout 函数放在另一个地方，继续执行 for 循环。打出 0 1 2 3 4 5 ,当 for 循环执行完毕之后，再将 setTimeout 函数取出执行，在这个时候 i 经过 for 循环已经变成了 6 ，所以之后 setTimeout 打印出的结果就都是 6 .
+        </div>
+          <a href="http://liqiyi.xyz/posts/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="http://liqiyi.xyz/posts/js%E5%87%BD%E6%95%B0%E5%92%8C%E6%95%B0%E7%BB%84/" class="color-inherit dim link">
             JS函数和数组
             </a>
@@ -166,47 +193,18 @@ let obj = () obj {} __proto__:Object JS 的增删改查 删除对象中的属性
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://liqiyi.xyz/posts/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="color-inherit dim link">
-            JS的基本语法
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          JS 基本语法 表达式和语句 语句是为了完成某种人物的操作，一般会改变环境变量，例如声明或者赋值等。语句以分号结尾，标志一句结束。
-而表达式则是类似于 1+3 这种为了得到返回值的计算式。
-语句和表达式的区别在于语句是为了进行某种操作，一般情况下不需要返回值；而表达式则是为了得到返回值，所以一定有一个返回值出现。
-书写规范 在 JS 当中大小写是非常敏感的，需要注意两者的区别。而空格和回车对整体代码没有影响，可以适当添加让代码更加清晰。不过需要注意的一个地方就是 return 的后面不能添加回车。
-不需要没条代码都写上注释，则重挑选记录便可。
-可以使用 { } 将代码放在一起组合成代码块，常与 if/while/for 等语句合用。
-标识符 即用来规定各种名称的合理写法，例如变量名或者函数名等。
-在命名的时候可以 除数字之外的字母 、中文 或者 &lsquo;$&rsquo; / &lsquo;_&lsquo;开头，第二位及以后就可使用数字。也可以使用中文作为合法标识符。
-常见的基础语句 if&hellip;else&hellip; 语法规则为
-if(表达式){语句1}else{ 语句2 } [语句 1 在只有一句话的时候可以省略 { } ，不过以防产生歧义，还是写完整比较好]
-switch 适用于多层判断结构。语法结构为：
-switch ( fruit ){case 'banana':console.log( 'banana' );break;case 'apple':console.log( 'apple' );break;default:console.log( 'none' );} [break记得要写上，不然代码有可能一直执行下去] 还有几种类似的逻辑判断语句
-        </div>
-          <a href="http://liqiyi.xyz/posts/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="http://liqiyi.xyz/posts/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="link black dim">
+              JS的基本语法
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="http://liqiyi.xyz/posts/hugo%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/" class="link black dim">

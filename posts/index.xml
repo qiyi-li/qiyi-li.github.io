@@ -6,10 +6,22 @@
     <description>Recent content in Posts on errgou的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Mon, 02 Mar 2020 21:27:22 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 04 Mar 2020 13:59:59 +0800</lastBuildDate>
     
 	<atom:link href="http://liqiyi.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JS函数的执行时机</title>
+      <link>http://liqiyi.xyz/posts/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/</link>
+      <pubDate>Wed, 04 Mar 2020 13:59:59 +0800</pubDate>
+      
+      <guid>http://liqiyi.xyz/posts/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/</guid>
+      <description>S 的执行顺序一般是从上往下依次进行，比如下面这个函数， 先是声明了 i ，然后利用 for 循环，将 i 不断 +1 ，依次打出。打印结果依次为: 0 1 2 3 4 5
+let i = 0 for(i =0; i&amp;lt;6; i++){ console.log(i) } 如果这时在 for 循环内添加一个延时执行函数，那么结果就会发生变化，将打印出 6 个 6
+let i = 0 for(i = 0; i&amp;lt;6; i++){ setTimeout(()=&amp;gt;{ console.log(i) },0) } 我们可以在 setTimeout 后面加上一句，以此判断函数的执行顺序。
+let i = 0 for(i=0;i&amp;lt;6;i++){ setTimeout(()=&amp;gt;{ console.log(i) },0) console.log(i) } // 结果为： 0 1 2 3 4 5 6 6 6 6 6 6 当执行到延时函数 setTimeout 时，JS 会先跳过，将 setTimeout 函数放在另一个地方，继续执行 for 循环。打出 0 1 2 3 4 5 ,当 for 循环执行完毕之后，再将 setTimeout 函数取出执行，在这个时候 i 经过 for 循环已经变成了 6 ，所以之后 setTimeout 打印出的结果就都是 6 .</description>
+    </item>
     
     <item>
       <title>JS函数和数组</title>
